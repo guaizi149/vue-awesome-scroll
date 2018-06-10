@@ -1,12 +1,12 @@
 {
   "name": "vue-awesome-scroll",
   "description": "scroll component for Vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "private": false,
   "author": {
     "name": "langlong149",
-    "email": "123@foxmail.com",
+    "email": "qingxin149@163.com",
     "url": "http://xjj518.com"
   },
   "bugs": {
