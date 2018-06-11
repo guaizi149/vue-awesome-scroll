@@ -1,7 +1,7 @@
 {
   "name": "vue-awesome-scroll",
   "description": "scroll component for Vue",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "license": "MIT",
   "private": false,
   "author": {
@@ -33,10 +33,7 @@
     "vue-awesome-scroll",
     "vue awesome scroll",
     "awesome-scroll",
-    "vue carrousel",
     "vue scroll",
-    "vue slide",
-    "carrousel",
     "scroll"
   ],
   "scripts": {
@@ -49,7 +46,7 @@
     "publish": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "better-scroll": "^1.11.1",
+    "better-scroll": "^1.12.0",
     "object-assign": "^4.1.1"
   },
   "expDependencies": {

@@ -11,9 +11,9 @@ module.exports = merge(baseConfig, {
   externals: {
     'better-scroll': {
       root: 'BScroll',
-      commonjs: 'bscroll',
-      commonjs2: 'bscroll',
-      amd: 'bscroll'
+      commonjs: 'better-scroll',
+      commonjs2: 'better-scroll',
+      amd: 'better-scroll'
     },
     'object-assign': 'object-assign'
   },
@@ -32,8 +32,8 @@ module.exports = merge(baseConfig, {
       resolve('src'),
       resolve('node_modules')
     ],
-    // alias: {
-    //   'swiper$': 'swiper/dist/js/swiper.js'
-    // }
+    alias: {
+      'bscroll$': 'better-scroll'
+    }
   }
 })

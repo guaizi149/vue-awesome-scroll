@@ -18,8 +18,9 @@
   </div>
 </template>
 <script>
-  import BScroll from 'better-scroll'
-  import Loading from './loading/loading.vue'
+  import _BScroll from 'better-scroll';
+  const BScroll = window.BScroll || _BScroll;
+  import Loading from './loading/loading.vue';
 
     // pollfill
   if (typeof Object.assign != 'function') {
@@ -221,12 +222,3 @@
     }
   }
 </script>
-<style>
-  .pullup-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 16px 0;
-  }
-</style>
