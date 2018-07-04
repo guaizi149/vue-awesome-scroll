@@ -70,6 +70,19 @@ export default {
           // some scroll options/callbacks
           // 所有的参数同 scroll 官方 api 参数
           // ...
+           pullUpLoad: {
+                    threshold: 0, //负数表示向上拉多少更新，正数表示距离底部还有多少时就去更新
+                    txt: {
+                        more: "加载更多...",
+                        noMore: "没有更多历史版本了"
+                    }
+           },
+           pullDownRefresh: {
+                        threshold: 60,
+                        stopTime: 1000,
+                        txt: '更新成功'
+           },
+           bounceTime: 1000,
         }
       }
     },
@@ -86,9 +99,34 @@ export default {
   }
 </script>
 ```
+
+# Props 配置：
+
+| 参数    | 说明                                                         | 类型   | 可选值 | 默认值                                                       |
+| ------- | ------------------------------------------------------------ | ------ | ------ | ------------------------------------------------------------ |
+| options | better-scroll 配置项，具体请参考[BS 官方文档](https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/options.html) | Object | -      | { observeDOM: true, click: true, probeType: 1, scrollbar: false, pullDownRefresh: false, pullUpLoad: false } |
+
+ `options`中 better-scroll 的几个常用配置项，`pullDownRefresh`、`pullUpLoad`这两个配置即可设为 `Boolean`（`false` 关闭该功能，`true` 开启该功能，并使用默认子配置），也可设为`Object`，开启该功能并具体定制其子配置项。 
+
+- `pullDownRefresh` 子配置项
+
+| 参数      | 说明                       | 类型   | 可选值 | 默认值                                       |
+| --------- | -------------------------- | ------ | ------ | -------------------------------------------- |
+| threshold | 下拉刷新动作的下拉距离阈值 | Number | -      | 90                                           |
+| stop      | 回弹停留的位置             | Number | -      | 组件会自动计算回弹时显示的元素高度作为默认值 |
+| stopTime  | 刷新成功的文案显示时间     | Number | -      | 600                                          |
+| txt       | 刷新成功的文案             | String | -      | 'Refresh success'                            |
+
+- `pullUpLoad` 子配置项
+
+| 参数      | 说明                       | 类型   | 可选值 | 默认值                   |
+| --------- | -------------------------- | ------ | ------ | ------------------------ |
+| threshold | 上拉刷新动作的上拉距离阈值 | Number | -      | 0                        |
+| txt       | 上拉加载的相关文案         | Object | -      | { more: '', noMore: '' } |
+
 # TO DO
-- [ ] pull up to load
-- [ ] pull down to refresh
+- [x] pull up to load
+- [x] pull down to refresh
 - [ ] add exmaple
 - [ ] add test
 - [ ] add key point to use better-scroll
